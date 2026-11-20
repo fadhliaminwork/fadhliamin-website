@@ -16,7 +16,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314243A'/%3E%3Ctext x='16' y='22' font-size='16' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3EFA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,7 +33,6 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#expertise">Expertise</a></li>
-        <li><a href="#experience">Experience</a></li>
         <li><a href="#knowledge">Projects &amp; Knowledge</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -45,6 +44,39 @@
 
 <!-- 1. HOME -->
 <section class="hero" id="home">
+  <!-- Decorative IT artwork: circuit traces, chip and network nodes (edit colours in css/style.css) -->
+  <svg class="hero-art" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <g class="traces">
+      <path d="M0 120H180L220 160H420L460 120H700"/>
+      <path d="M1200 80H980L940 120H820L780 160H640"/>
+      <path d="M0 300H120L160 340H340V420H520"/>
+      <path d="M1200 260H1060L1020 300H900V380H760L720 420H560"/>
+      <path d="M300 600V500L340 460H600"/>
+      <path d="M1200 520H1000L960 480H860"/>
+      <path d="M700 0V60L740 100H900"/>
+      <path d="M420 0V70L380 110H300"/>
+    </g>
+    <g class="flow">
+      <path d="M0 120H180L220 160H420L460 120H700"/>
+      <path d="M1200 260H1060L1020 300H900V380H760L720 420H560"/>
+      <path d="M700 0V60L740 100H900"/>
+      <path d="M1200 520H1000L960 480H860"/>
+    </g>
+    <rect x="880" y="210" width="130" height="130" rx="8"/>
+    <rect x="896" y="226" width="98" height="98" rx="4"/>
+    <rect class="pins" x="868" y="198" width="154" height="154" rx="10"/>
+    <g>
+      <circle class="node" cx="700" cy="120" r="6"/><circle class="node n2" cx="640" cy="160" r="6"/>
+      <circle class="node" cx="520" cy="420" r="6"/><circle class="node n2" cx="560" cy="420" r="6"/>
+      <circle class="node" cx="600" cy="460" r="6"/><circle class="node n2" cx="860" cy="480" r="6"/>
+      <circle class="node" cx="900" cy="100" r="6"/><circle class="node n2" cx="300" cy="110" r="6"/>
+      <circle class="node" cx="180" cy="120" r="6"/><circle class="node n2" cx="340" cy="420" r="6"/>
+    </g>
+    <g class="code">
+      <text x="760" y="64">&lt;/&gt;</text><text x="130" y="470">{ }</text>
+      <text x="1040" y="420">01101</text><text x="470" y="270">SQL</text>
+    </g>
+  </svg>
   <div class="wrap hero-grid">
     <div>
       <p class="label">Technology Business Development</p>
@@ -55,14 +87,18 @@
         <a class="btn btn-ghost" href="#contact">Get In Touch</a>
       </div>
     </div>
-    <!-- Typography-based visual -->
-    <div class="stack" aria-hidden="true">
-      <div class="stack-row"><b>BUSINESS</b></div>
-      <div class="stack-row"><b>TECHNOLOGY</b></div>
-      <div class="stack-row accent"><b>OPERATIONS</b></div>
-      <div class="stack-row"><b>TRANSFORMATION</b></div>
+    <!-- Terminal-style visual (decorative; the headline carries the message) -->
+    <div class="term" aria-hidden="true">
+      <div class="term-bar"><i></i><i></i><i></i><span>fadhli@amin:~</span></div>
+      <div class="term-body">
+        <p><span class="pr">$</span>connect --business --technology</p>
+        <p><span class="pr">$</span>focus --area</p>
+        <p class="big"><b id="typed">BUSINESS</b><span class="caret"></span></p>
+        <p class="dim"># enterprise solutions &middot; ERP &middot; MES &middot; WMS</p>
+      </div>
     </div>
   </div>
+  <div class="wrap scroll-cue" aria-hidden="true">Scroll to explore</div>
   <div class="strip">
     <!-- Scrolling band: the second list is a duplicate for a seamless loop -->
     <div class="marquee"><ul><li>Enterprise Solutions</li><li>ERP, MES &amp; WMS</li><li>Manufacturing Digitalisation</li><li>Business Development</li><li>Solution Engagement</li><li>AI &amp; Automation</li></ul><ul aria-hidden="true"><li>Enterprise Solutions</li><li>ERP, MES &amp; WMS</li><li>Manufacturing Digitalisation</li><li>Business Development</li><li>Solution Engagement</li><li>AI &amp; Automation</li></ul></div>
@@ -70,7 +106,7 @@
 </section>
 
 <!-- 2. ABOUT -->
-<section class="sec light" id="about">
+<section class="sec" id="about">
   <div class="wrap about-grid">
     <!-- Typography tiles (no photos needed) -->
     <div class="tiles" aria-hidden="true">
@@ -101,7 +137,7 @@
 </section>
 
 <!-- 3. EXPERTISE -->
-<section class="sec alt" id="expertise">
+<section class="sec dark" id="expertise">
   <div class="wrap">
     <p class="label">Expertise</p>
     <h2>Areas of <span class="hl">Expertise</span></h2>
@@ -141,51 +177,8 @@
   </div>
 </section>
 
-<!-- 4. EXPERIENCE -->
-<section class="sec light" id="experience">
-  <div class="wrap">
-    <p class="label">Experience</p>
-    <h2>Professional <span class="hl">Journey</span></h2>
-    <div class="timeline">
-      <article class="job">
-        <div class="when"><span class="dot"></span>Current</div>
-        <div>
-          <h3>Phitomas</h3>
-          <p class="role">Technology Business Development</p>
-          <p>Engaged in business development activities involving enterprise software and digital transformation solutions, with exposure to manufacturing and business operations.</p>
-          <div class="cols">
-            <div>
-              <h4>Responsibilities and exposure</h4>
-              <ul class="bul">
-                <li>Identifying potential business opportunities.</li>
-                <li>Engaging with IT, finance, operations and management stakeholders.</li>
-                <li>Understanding business and operational challenges.</li>
-                <li>Introducing enterprise technology solutions.</li>
-                <li>Supporting product presentations and demonstrations.</li>
-                <li>Collaborating with internal presales and technical teams.</li>
-                <li>Exploring ERP, MES, WMS and manufacturing digitalisation opportunities.</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Relevant solution exposure</h4>
-              <ul class="bul">
-                <li>SAP Business One</li>
-                <li>Infor CloudSuite Industrial</li>
-                <li>Infor LN</li>
-                <li>Axacute</li>
-                <li>IoT and digitalisation solutions</li>
-              </ul>
-            </div>
-          </div>
-          <p class="note">My professional focus combines business development, enterprise technology and solution engagement.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- APPROACH -->
-<section class="sec alt" id="approach">
+<section class="sec" id="approach">
   <div class="wrap">
     <p class="label">Approach</p>
     <h2>How I <span class="hl">Work</span></h2>
@@ -200,7 +193,7 @@
 </section>
 
 <!-- 5. PROJECTS & KNOWLEDGE -->
-<section class="sec light soft" id="knowledge">
+<section class="sec soft" id="knowledge">
   <div class="wrap">
     <p class="label">Projects &amp; Knowledge</p>
     <h2>Exploring <span class="hl">Technology</span> in Business</h2>
@@ -240,19 +233,13 @@
   </div>
 
 <!-- 6. CONTACT -->
-<section class="sec contact" id="contact">
+<section class="sec dark contact" id="contact">
   <div class="wrap two">
     <div>
       <p class="label">Contact</p>
       <h2>Let's <span class="hl">Connect.</span></h2>
       <p class="lead">Whether you're exploring enterprise technology, discussing business opportunities or simply exchanging ideas about digital transformation, I'd be happy to connect.</p>
     </div>
-    <dl class="links">
-      <div><dt>Email</dt><dd><a href="mailto:fadhliamin@phitomas.com">fadhliamin@phitomas.com</a></dd></div>
-      <!-- TODO: replace the href below with your real LinkedIn profile URL -->
-      <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank" rel="noopener">linkedin.com/in/YOUR-LINKEDIN-USERNAME</a></dd></div>
-      <div><dt>Website</dt><dd><a href="https://fadhliamin.my">fadhliamin.my</a></dd></div>
-    </dl>
   </div>
 </section>
 </main>

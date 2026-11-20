@@ -74,3 +74,21 @@
     io.observe(el);
   });
 })();
+
+/* Terminal hero: types and deletes the focus words */
+(function () {
+  'use strict';
+  var el = document.getElementById('typed');
+  if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var words = ['BUSINESS', 'TECHNOLOGY', 'OPERATIONS', 'TRANSFORMATION'];
+  var w = 0, i = words[0].length, dir = -1;
+  function tick() {
+    el.textContent = words[w].slice(0, i);
+    var d = 60;
+    if (dir === -1) {
+      if (i > 0) { i--; d = 35; } else { w = (w + 1) % words.length; dir = 1; d = 250; }
+    } else if (i < words[w].length) { i++; d = 75; } else { dir = -1; d = 1800; }
+    setTimeout(tick, d);
+  }
+  setTimeout(tick, 1800);
+})();

@@ -62,11 +62,11 @@ git push
 
 ## Editing guide
 - **Change text:** open `index.html`, search for the sentence (Ctrl+F), edit it and save.
-- **Change colours:** `css/style.css`, the `:root` block at the top. `--bg` is navy, `--ink` is text, `--accent` is orange. The `.light` rule further down sets the colours for the white sections.
+- **Change colours:** `css/style.css`, the `:root` block at the top sets the cream pages (`--bg` cream, `--ink` navy text, `--accent` orange). The `.dark` rule further down sets the navy sections.
 - **Change font sizes:** in `css/style.css`, edit `font-size` in the `body`, `h1`, `h2` and `h3` rules.
 - **Update email:** search `fadhliamin@phitomas.com` in `index.html` and change both the link and the visible text.
 - **Add LinkedIn:** search `YOUR-LINKEDIN-USERNAME` in `index.html` and replace it with your profile name (two places).
-- **Add a section:** copy a whole `<section> ... </section>` block, give it a new `id`, edit the content, and add a link to it in the menu: `<li><a href="#newid">Name</a></li>`. Use `class="sec"` (navy) or `class="sec light"` (white).
+- **Add a section:** copy a whole `<section> ... </section>` block, give it a new `id`, edit the content, and add a link to it in the menu: `<li><a href="#newid">Name</a></li>`. Use `class="sec"` (cream) or `class="sec dark"` (navy).
 - **Add a profile photo later:** save it as `assets/profile.jpg`, then add `<img src="assets/profile.jpg" alt="Fadhli Amin" width="320" height="400">` in the About section.
 - **Add a new topic or article:** copy one `<details> ... </details>` block in the Projects & Knowledge section and edit the title and text.
 - **Edit the How I Work steps:** find `class="steps"` in `index.html`.
